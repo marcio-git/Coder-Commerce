@@ -1,10 +1,9 @@
 import React from 'react';
-import logo from '../ecommerce.png';
+import logo from '../images/ecommerce.png';
 
 const styles = {
 	float: 'left',
 	width: '15vw',
-	transform: 'translate(0%, -10%)'
 }
 
 function Brand() {

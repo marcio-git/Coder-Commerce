@@ -1,17 +1,36 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 a {
   text-decoration: none;
+  color: #FFF;
+  font-weight: bold;
 }
 .navBar {
-	padding: 30px 30px;
+  background-color: #B5A3EC;
+  padding: 10px 30px;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
 }
 
 .ulStyles {
 	list-style: none;
-	display: flex;
+  display: flex;
+  flex-grow: 2;
 	height: max-content;
-	justify-content: space-around;
+	justify-content: space-evenly;
 }
+
+.cartWidget {
+  /* background-color: #FFF; */
+  /* border: 1px solid #FFF;
+  border-radius: 5px; */
+  padding: 5px;
+}
+.title {
+  font-size: 4em;
+  text-align: center;
+ }
