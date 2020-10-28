@@ -3,19 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --primary: #B5A3EC;
+  --secondary: #9685c9;
+}
 a {
   text-decoration: none;
+}
+a:active {
+  opacity: .8;
+}
+/* ---------------- NavBar ---------------- */
+.navBar a {
   color: #FFF;
   font-weight: bold;
 }
 .navBar {
-  background-color: #B5A3EC;
+  background-color: var(--primary);
   padding: 10px 30px;
   vertical-align: middle;
   display: flex;
   align-items: center;
 }
-
 .ulStyles {
 	list-style: none;
   display: flex;
@@ -23,14 +32,29 @@ a {
 	height: max-content;
 	justify-content: space-evenly;
 }
+/* ------------------------------------- */
 
 .cartWidget {
-  /* background-color: #FFF; */
-  /* border: 1px solid #FFF;
-  border-radius: 5px; */
   padding: 5px;
 }
+
 .title {
-  font-size: 4em;
-  text-align: center;
- }
+ font-size: 3em;
+ text-align: center;
+}
+
+/* ---------------- ItemCount --------------- */
+.item-count {
+  display: grid;
+  width: 140px;
+  margin: auto;
+  /* border: 1px solid var(--primary); */
+}
+.add-remove {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+/* ------------------------------------- */
+
