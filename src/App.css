@@ -14,16 +14,17 @@ a:active {
   opacity: .8;
 }
 /* ---------------- NavBar ---------------- */
-.navBar a {
-  color: #FFF;
-  font-weight: bold;
-}
 .navBar {
   background-color: var(--primary);
+  font-size: min(2.7vw, 1em);
   padding: 10px 30px;
   vertical-align: middle;
   display: flex;
   align-items: center;
+}
+.navBar a {
+  color: #FFF;
+  font-weight: bold;
 }
 .ulStyles {
 	list-style: none;
@@ -35,13 +36,16 @@ a:active {
 /* ------------------------------------- */
 
 .cartWidget {
+  width: max(3em, 20px);
   padding: 5px;
 }
 
-.title {
- font-size: 3em;
- text-align: center;
-}
+.slogan {
+  font-size: 5vw;
+  padding: 2vw;
+  margin-left: 50px;
+  text-align: center;
+ }
 
 /* ---------------- ItemCount --------------- */
 .item-count {
