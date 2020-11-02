@@ -9,7 +9,7 @@ function App() {
   return (
     <>
     <NavBar />
-    <ItemListContainer title='BIENVENIDO' />
+    <ItemListContainer slogan='Don’t worry, we have it.' />
     <ItemCount stock="5" initial="1" />
     </>
   );

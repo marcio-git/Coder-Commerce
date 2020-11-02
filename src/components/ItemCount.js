@@ -18,9 +18,9 @@ function ItemCount({ stock, initial, onAdd }) {
 		<div className="item-count">
 			<span style={{color: 'var(--secondary)',fontWeight: 600, margin: '5px'}}>Stock { stock }</span>
 			<div className="add-remove">
-				<button className="btn btn-effect" onClick={ add }>+</button>
+				<button className="btn btn-effect" onClick={ remove }>－</button>
 				<p style={{fontSize: '2em', textAlign: 'center'}}>{ quantity }</p>
-				<button className="btn btn-effect" onClick={ remove }>—</button>
+				<button className="btn btn-effect" onClick={ add }>＋</button>
 			</div>
 			<AddCart />
 		</div>
