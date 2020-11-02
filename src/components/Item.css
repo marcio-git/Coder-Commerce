@@ -1,0 +1,23 @@
+.card {
+	min-width: calc(100% / 5);
+	height: 250px;
+	margin: 20px;
+	padding: 5px;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+.card-img {
+	width: 100%;
+	height: 60%;
+	margin: auto;
+	display: block;
+	object-fit: cover;
+}
+.card p {
+	padding: 10px 15px;
+}
+.price {
+	font-size: 1.2em;
+	font-weight: bold;
+}
