@@ -10,7 +10,7 @@ function App() {
     <>
     <NavBar />
     <ItemListContainer slogan='Don’t worry, we have it.' />
-    <ItemCount stock="5" initial="1" />
+    <ItemCount stock={5} initial={1} onAdd={quantity => alert(`Agregados al carrito: ${quantity}`)}/>
     </>
   );
 }
