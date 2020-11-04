@@ -14,8 +14,10 @@ let productList = [
 
 function itemsPromise() {
 	return new Promise((res) => {
-		res(productList)
-	}, 2000)
+		setTimeout(() => {
+			res(productList)
+		}, 2000)
+	})
 }
 function ItemListContainer({slogan}) {
 	const [items, setItems] = useState([])
