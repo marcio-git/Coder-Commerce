@@ -4,14 +4,14 @@ import './App.css';
 import './Buttons.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/Home';
-import ItemCount from './components/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer'
 
 function App() {
   return (
     <>
     <NavBar />
     <ItemListContainer slogan='Don’t worry, we have it.' />
-    <ItemCount stock={5} initial={1} onAdd={quantity => alert(`Agregados al carrito: ${quantity}`)}/>
+    <ItemDetailContainer />
     </>
   );
 }

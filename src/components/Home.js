@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ItemList from './ItemList';
+import './Loader.css';
 
 let productList = [
 	{id: 1, title: 'producto', price: '0,00', url: 'https://unsplash.it/200?image=1080'},
@@ -21,12 +22,18 @@ function itemsPromise() {
 }
 function ItemListContainer({slogan}) {
 	const [items, setItems] = useState([])
+	const [loading, setLoading] = useState(true)
 	
 	useEffect(() => {
 		itemsPromise().then(list => {
 			setItems(list)
+			setLoading(false)
 		})
 	}, [])
+
+	if (loading) {
+		return <div className='loader'></div>;
+	}
 
 	return <>
 		<h1 className='slogan'>
