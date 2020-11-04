@@ -1,0 +1,23 @@
+.detail-card {
+	display: flex;
+	margin: auto;
+	padding: 30px;
+	width: 90vw;
+
+}
+.detail-card > * > * {
+	margin: 20px;
+}
+.detail-card .description {
+	font-size: 2em;
+}
+
+.side-2 {
+	margin-left: auto;
+}
+
+.price {
+	font-size: 2.5em;
+	font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
