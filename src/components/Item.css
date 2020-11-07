@@ -17,7 +17,7 @@
 .card p {
 	padding: 10px 15px;
 }
-.price {
-	font-size: 1.2em;
+.card .price {
+	font-size: 1.5em;
 	font-weight: bold;
 }

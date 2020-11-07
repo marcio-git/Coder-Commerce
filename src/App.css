@@ -6,12 +6,17 @@
 :root {
   --primary: #B5A3EC;
   --secondary: #9685c9;
+  --red: #e43b3b;
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 a:active {
   opacity: .8;
+}
+li {
+  list-style: none;
 }
 /* ---------------- NavBar ---------------- */
 .navBar {
@@ -54,11 +59,17 @@ a:active {
   margin: auto;
   /* border: 1px solid var(--primary); */
 }
+.item-count span {
+  color: var(--secondary);
+  font-weight: 600;
+  margin: 5px;
+}
 .add-remove {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
+
 /* ------------------------------------- */
 

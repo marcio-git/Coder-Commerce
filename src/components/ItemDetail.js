@@ -7,10 +7,10 @@ function ItemDetail({ item }) {
 	return <>
 		<div className='detail-card'>
 			<div className='side-1'>
-				<img src={item.url} alt='image' />
-				<p className='description'>{item.title}</p>
+				<img src={item.url} alt='🕐' />
 			</div>
 			<div className='side-2'>
+				<p className='description'>{item.title}</p>
 				<p className='price'>${item.price}</p>
 				<ItemCount stock={item.stock} initial={1} onAdd={quantity => alert(`Agregados al carrito: ${quantity}`)} />
 			</div>
