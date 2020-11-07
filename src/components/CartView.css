@@ -25,7 +25,9 @@
   -webkit-transition: background 300ms ease-in-out;
   transition: background 300ms ease-in-out;
 }
-
+.list-cart-box {
+	margin: 2%;
+}
 .item-cart-list {
 	width: 100%;
 	height: 100px;

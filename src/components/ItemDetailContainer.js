@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Loader.css';
 import ItemDetail from './ItemDetail';
+import { useParams } from 'react-router-dom';
 
 const producstList = [
 	{id: 1, title: 'producto 1', stock: 5, price: '230,00', url: 'https://unsplash.it/200?image=1080'},
@@ -13,20 +14,21 @@ const producstList = [
 	{id: 8, title: 'producto 8', stock: 3, price: '1200,00', url: 'https://unsplash.it/200?image=1005'},
 ]
 
-function itemPromise() {
+function itemPromise(id) {
 	return new Promise((res) => {
 		setTimeout(() => {
-			res(producstList)
+			res(producstList.filter(i => i.id == id))
 		}, 3000)
 	})
 }
 
 function ItemDetailContainer() {
 	const [item, setItem] = useState(false);
-	const [loading, setLoading] = useState(true)
+	const [loading, setLoading] = useState(true);
+	const {id} = useParams();
 
 	useEffect(() => {
-		itemPromise().then(item => {
+		itemPromise(id).then(item => {
 			setItem(item[0])
 			setLoading(false)
 		})
