@@ -56,8 +56,6 @@ li {
 .item-count {
   display: grid;
   width: 140px;
-  margin: auto;
-  /* border: 1px solid var(--primary); */
 }
 .item-count span {
   color: var(--secondary);
