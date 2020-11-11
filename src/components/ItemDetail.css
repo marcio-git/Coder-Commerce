@@ -1,5 +1,6 @@
 .detail-card {
 	display: flex;
+	margin: auto;
 	margin-top: 10vh;
 	padding: 30px;
 	width: 90%;
@@ -13,25 +14,27 @@
 	object-fit: contain;
 }
 
-.detail-card .description {
-	font-size: 2em;
-}
 .side-1 {
-	flex-grow: 2;
+	width: 60%;
 	background-color: #fff;
 	background-color: transparent;
 }
 .side-2 {
-	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
-	align-items: center;
-	justify-content: space-evenly;
+	width: 40%;
 	margin-right: 5%;
 }
-
+.side-2 .description {
+	font-size: 1.5em;
+}
 .side-2 .price {
 	font-size: 2.5em;
 	font-family: "Montserrat", sans-serif;
   font-weight: 900;
+}
+.side-2 > p {
+	height: 30%;
+	text-align: center;
+}
+.side-2 > * {
+	margin: auto
 }
