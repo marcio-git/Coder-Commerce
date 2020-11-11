@@ -32,7 +32,7 @@ function ItemDetailContainer() {
 			setItem(item[0])
 			setLoading(false)
 		})
-	}, [])
+	}, [id])
 
 	if (loading) {
 		return <div className='loader'></div>;
