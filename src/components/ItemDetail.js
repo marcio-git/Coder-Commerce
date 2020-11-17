@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ItemDetail.css';
 import ItemCount from './ItemCount';
+import { CartContext } from '../context/cartContext';
 
 function ItemDetail({ item }) {
 	const [ mount, setMount ] = useState(true);
 	const [ quantityAdded, setQuantityAdded ] = useState(null);
 
+	const { addItem } = useContext(CartContext);
+
 	const onAdd = quantityToAdd => {
+		addItem(
+			{
+				id: item.id,
+				product: item.title,
+				price: item.price,
+				url: item.url
+			}, quantityToAdd)
 		setQuantityAdded(quantityToAdd)
 		setMount(!mount)
 	}
