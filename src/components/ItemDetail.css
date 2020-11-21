@@ -1,10 +1,13 @@
 .detail-card {
 	display: flex;
 	margin: auto;
-	margin-top: 10vh;
+	margin-top: 3vh;
 	padding: 30px;
 	width: 90%;
-	height: 400px;
+	height: 500px;
+	box-shadow: 
+	0 2px 4px 0 rgba(0, 0, 0, 0.2), 
+	0 3px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .detail-card img {
 	display: block;
@@ -21,18 +24,26 @@
 }
 .side-2 {
 	width: 40%;
-	margin-right: 5%;
+	margin-left: 5%;
+}
+.side-2 .title {
+	font-size: 1.5em;
+	text-align: left;
 }
 .side-2 .description {
-	font-size: 1.5em;
+	text-align: left;
+	margin: 10px 5px;
 }
 .side-2 .price {
 	font-size: 2.5em;
 	font-family: "Montserrat", sans-serif;
-  font-weight: 900;
+	font-weight: 900;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .side-2 > p {
-	height: 30%;
+	height: 20%;
 	text-align: center;
 }
 .side-2 > * {

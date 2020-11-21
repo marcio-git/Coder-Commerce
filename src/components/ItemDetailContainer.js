@@ -34,12 +34,8 @@ function ItemDetailContainer() {
 		})
 	}, [id])
 
-	if (loading) {
-		return <div className='loader'></div>;
-	}
-	
 	return <>
-			{item && <ItemDetail item={ item } />}
+			{loading ? <div className='loader'></div> : <ItemDetail item={ item } />}
 		</>
 }
 
