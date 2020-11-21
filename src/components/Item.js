@@ -8,7 +8,8 @@ function Item ({ item }) {
 			<Link to={`/item/${item.id}`}>
 				<img src={item.url} className='card-img' alt='🕐'/>
 			</Link>
-			<p className='price'>${item.price}</p>
+			<div id="border"></div>
+			<p className='price'>{item.price.toLocaleString('en-US', {style: 'currency',currency: 'USD'})}</p>
 			<p>{item.title}</p>
 		</div>
 	</>

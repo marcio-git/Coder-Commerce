@@ -1,5 +1,9 @@
 .item-list{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+.item-list-wrapper {
+	width: 90%;
+	margin: 2% auto;
 }
