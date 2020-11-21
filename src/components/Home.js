@@ -31,15 +31,11 @@ function ItemListContainer({slogan}) {
 		})
 	}, [])
 
-	if (loading) {
-		return <div className='loader'></div>;
-	}
-
 	return <>
 		<h1 className='slogan'>
 			{slogan}
 		</h1>
-		<ItemList items={ items }/>
+		{loading ? <div className='loader'></div> : <ItemList items={ items }/>}
 	</>
 };
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 function ItemCount({ stock, initial, onAdd }) {
-	const [quantity, setQuantity] = useState(stock == 0 ? 0 : initial);
+	const [quantity, setQuantity] = useState(stock === 0 ? 0 : initial);
 
 	const add = () => quantity < stock ? setQuantity(quantity + 1) : quantity;
 	const remove = () => quantity > initial ? setQuantity(quantity - 1) : quantity;

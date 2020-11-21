@@ -15,7 +15,7 @@ const addItem = (item, quantity) => {
 	//lógica incorporada de no aceptar duplicados
 	if(existeProd) {//si existe lo actualiza
 		existeProd.quantity = quantity;
-		existeProd.totalXprod = (quantity * parseFloat(item.price))
+		existeProd.totalXprod = (quantity * item.price)
 
 		console.log(existeProd.quantity);
 		console.log(existeProd.totalXprod);

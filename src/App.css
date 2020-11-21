@@ -43,8 +43,8 @@ li {
 .slogan {
   font-size: 5vw;
   padding: 2vw;
-  margin-left: 50px;
   text-align: center;
+  font-family: 'Lobster', cursive;
  }
 
 /* ---------------- ItemCount --------------- */
