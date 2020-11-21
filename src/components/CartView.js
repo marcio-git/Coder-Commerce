@@ -21,11 +21,11 @@ function CartView() {
 	function EmptyCartView() {
 		return (
 		<section style={{ margin: '2%' }}>
-			<Link to="/" style={{ textAlign: 'center', fontSize: '1.5em', fontWeight: 'bold' }}>
-			← Home
-			</Link>
-			<img src={EmptyCart} style={{ display: 'block', margin: 'auto' }} alt=""/>
+			<img src={EmptyCart} style={{ display: 'block', margin: 'auto' }} alt="" />
 			<h1 style={{ textAlign: 'center', fontSize: '3em' }}>Empty Cart</h1>
+			<div style={{ textAlign: 'center', fontSize: '1.5em', paddingTop: '10vh' }}>
+				<Link to="/">← Ir a Página Principal</Link>
+			</div>
 		</section>
 		)
 	}
