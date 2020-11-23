@@ -9,12 +9,10 @@ function CartWidget() {
 	const { cart } = useContext(CartContext);
 	
 	return <>
-		<div className='cartWidget'>
-			<Link to="/cart">
-				<img src={CartImg} alt='cart' style={{filter: 'invert()'}}/>
-				<p>{cart.length === 0 ? null : cart.length}</p>
-			</Link>
-		</div>
+		<Link to="/cart" className='cartWidget'>
+			<img src={CartImg} alt='cart' style={{filter: 'invert()'}}/>
+			<p>{cart.length === 0 ? null : cart.length}</p>
+		</Link>
 	</>
 }
 

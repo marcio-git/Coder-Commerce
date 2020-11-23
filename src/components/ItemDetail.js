@@ -23,9 +23,12 @@ function ItemDetail({ item }) {
 	}
 
 	return <>
-		<Link to="/" style={{ margin: 20, display: 'inline-block', fontSize: '1.5em', fontWeight: 'bold' }}>
+		<Link to="/" className="back-button">
 			← Atrás
 		</Link>
+		<div className="category">
+			<p>Categoría {'>'} <Link to={`/category/${item.categoryId}`}>{item.categoryId}</Link></p>
+		</div>
 		<div className='detail-card'>
 			<div className='side-1'>
 				<img src={item.url} alt='🕐' />

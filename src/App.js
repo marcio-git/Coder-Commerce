@@ -17,6 +17,9 @@ function App() {
           <Route exact path="/">
             <ItemListContainer slogan='Don’t worry, we have it.' />
           </Route>
+          <Route exact path="/category/:categoryId">
+            <ItemListContainer slogan='Don’t worry, we have it.' />
+          </Route>
           <Route exact path="/item/:id">
             <ItemDetailContainer />
           </Route>

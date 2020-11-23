@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { getFirestore } from '../firebase';
 import ItemList from './ItemList';
 import './Loader.css';
@@ -7,19 +8,22 @@ import './Loader.css';
 function ItemListContainer({slogan}) {
 	const [items, setItems] = useState([])
 	const [loading, setLoading] = useState(true)
+	const { categoryId } = useParams()
 	
 	/* -------------------------------- firebase -------------------------------- */
 	useEffect(() => {
 		const db = getFirestore();
-		const itemCollection = db.collection('items')
-		// const priceItems = itemCollection.where('price', '>', 3000)
+		let itemCollection = db.collection('items')
+
+		if(categoryId) itemCollection = itemCollection.where('categoryId', '==', categoryId)
+		
 		itemCollection.get().then((querySnapshot) => {
 			if(querySnapshot.size === 0) console.log('No results')
 			setItems(querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
-			console.log(items)
 			setLoading(false)
 		})
-	}, [])
+		console.log({items})
+	}, [categoryId])
 	/* -------------------------------------------------------------------------- */
 
 	return <>

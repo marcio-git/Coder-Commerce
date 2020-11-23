@@ -22,17 +22,17 @@ li {
 .navBar {
   background-color: var(--primary);
   font-size: min(2.7vw, 1em);
+  position: sticky;
+  top: 0;
+  width: 100%;
   padding: 10px 30px;
   vertical-align: middle;
   display: flex;
   align-items: center;
 }
-.navBar a {
+.ulStyles {
   color: #FFF;
   font-weight: bold;
-}
-.ulStyles {
-	list-style: none;
   display: flex;
   flex-grow: 2;
 	height: max-content;
@@ -64,5 +64,38 @@ li {
   align-items: center;
 }
 
-/* ------------------------------------- */
+/* --------------- Categorias --------------- */
+.dropdown {
+  width: 7rem;
+  position: relative;
+}
+.dropdown:hover .dropdown-list {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown-select {
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.dropdown-list {
+  border-radius: 4px;
+  background-color: white;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 
+	0 1px 2px 0 rgba(0, 0, 0, 0.2), 
+	0 1px 5px 0 rgba(0, 0, 0, 0.1);
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+.dropdown-list__item {
+  padding: 10px;
+  color: #000 !important;
+}
 
