@@ -67,6 +67,7 @@ function CartView() {
 			<br />
 			{loading ? 
 			<div className='loader'></div> : 
+<>
 			<div className="list-cart-box">
 				<ul>
 					<li>Eliminar</li>
@@ -76,8 +77,13 @@ function CartView() {
 					<li>Precio</li>
 					<li>Total</li>
 				</ul>
-				{!mount && <ItemCartList />}
-			</div>}
+				<ItemCartList />
+			</div>
+			<Link to="checkout" className="finalizar-compra">
+				<button className="btn btn-effect">Finalizar compra</button>
+			</Link>
+			</>
+			}
 		</>}
 	</>
 }

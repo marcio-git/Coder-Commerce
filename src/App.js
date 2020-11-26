@@ -7,6 +7,7 @@ import ItemListContainer from './components/Home';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import CartView from './components/CartView';
 import CartProvider from './context/cartContext';
+import Checkout from './components/Checkout';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route exact path="/cart">
             <CartView />
+          </Route>
+          <Route exact path="/checkout">
+            <Checkout />
           </Route>
         </Switch>
       </BrowserRouter>
