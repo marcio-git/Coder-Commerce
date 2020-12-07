@@ -6,15 +6,12 @@ import './CartView.css';
 
 function CartView() {
 	const { cart, removeItem, clear, totalPrice, calculoTotal } = useContext(CartContext);
-	
-	const [mount, setMount] = useState(true);
-	const [loading, setLoading] = useState(true)
+	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		calculoTotal()
 		setTimeout(() => {
 			setLoading(false)
-			setMount(!mount)
 		}, 1000)
 	}, [])
 
@@ -38,7 +35,7 @@ function CartView() {
 						</div>
 						<div className="item qty"><p>{prod.quantity}</p></div>
 						<div className="item price"><p>${prod.item.price}</p></div>
-						<div className="item total"><p>${prod.quantity * parseFloat(prod.item.price)}</p></div>
+						<div className="item total"><p>${prod.quantity * prod.item.price}</p></div>
 					</div>
 				))}
 				<div className="final-price">TOTAL: <span>{totalPrice.toLocaleString('en-US', {style: 'currency',currency: 'USD'})}</span></div>
@@ -55,22 +52,24 @@ function CartView() {
 			<br />
 			{loading ? 
 			<div id="preloader"><div id="loader"/></div> : 
-			<>
-			<div className="list-cart-box">
-				<ul>
-					<li>Eliminar</li>
-					<li>Editar</li>
-					<li>Producto</li>
-					<li>Cantidad</li>
-					<li>Precio</li>
-					<li>Total</li>
-				</ul>
-				<ItemCartList />
+			<div style={{margin:'auto 3%'}}>
+				<div className="list-cart-box">
+					<ul>
+						<li>Eliminar</li>
+						<li>Editar</li>
+						<li>Producto</li>
+						<li>Cantidad</li>
+						<li>Precio</li>
+						<li>Total</li>
+					</ul>
+					<ItemCartList />
+				</div>
+				<div className="finalizar-compra">
+					<Link to="checkout">
+						<button className="btn btn-effect">Continuar con la compra</button>
+					</Link>
+				</div>
 			</div>
-			<Link to="checkout" className="finalizar-compra">
-				<button className="btn btn-effect">Finalizar compra</button>
-			</Link>
-			</>
 			}
 		</>}
 	</>

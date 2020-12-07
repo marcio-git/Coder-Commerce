@@ -5,10 +5,37 @@
 .cartWidget p {
   position: relative;
   top: -97%;
-  left: 6%;
-  text-shadow: -1.5px 0 white, 0 1.5px white, 1.5px 0 white, 0 -1.5px white;
+  left: 5%;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   color: var(--primary);
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: 900;
   text-align: center;
+  animation: new-item-animation .3s cubic-bezier(0,.97,.58,1) forwards;
+}
+
+@keyframes new-item-animation {
+  from {
+      transform: translateY(-200px);
+  }
+  to {
+      transform : translateY(0);
+  }
+}
+
+.bounce {
+  animation: bounce .4s .2s;
+}
+
+@keyframes bounce {
+  0% { transform:  scaleY(0.6) scaleX(1.2); 
+  transform-origin: center bottom;}
+  25% { transform:  scaleY(1.2) scaleX(0.9); 
+  transform-origin: center bottom;}
+  50% { transform:  scaleY(0.7) scaleX(1.2);
+  transform-origin: center bottom;}
+  75% { transform:  scaleY(1.1) scaleX(0.9);
+  transform-origin: center bottom;}
+  100% { transform:  scaleY(0.9) scaleX(1); 
+  transform-origin: center bottom;}
 }
