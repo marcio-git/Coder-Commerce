@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../context/cartContext';
-import EmptyCart from '../images/emptyCart.png';
 import { Link } from 'react-router-dom';
 import './CartView.css';
 
@@ -21,7 +20,7 @@ function CartView() {
 	function EmptyCartView() {
 		return (
 		<section style={{ margin: '2%' }}>
-			<img src={EmptyCart} style={{ display: 'block', margin: 'auto' }} alt="" />
+			<img src='/images/emptyCart.png' style={{ display: 'block', margin: 'auto' }} alt="" />
 			<h1 style={{ textAlign: 'center', fontSize: '3em' }}>Empty Cart</h1>
 			<div style={{ textAlign: 'center', fontSize: '1.5em', paddingTop: '10vh' }}>
 				<Link to="/">← Ir a Página Principal</Link>
@@ -45,7 +44,7 @@ function CartView() {
 							</Link>
 						</div>
 						<div className="item product">
-							<img src={prod.item.url} alt="🕐" />
+							<img src={`/images/catalog/${prod.item.picture}`} alt="🕐" />
 							<p>{prod.item.product}</p>
 						</div>
 						<div className="item qty"><p>{prod.quantity}</p></div>

@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import EmptyCart from '../images/emptyCart.png';
 import * as firebase from 'firebase/app';
 import 'firebase/firestore';
 import { CartContext } from '../context/cartContext'
@@ -73,7 +72,7 @@ function Checkout() {
 	return <>
 
         { cart.length === 0 && !confirm && <section style={{ margin: '2%' }}>
-					<img src={EmptyCart} style={{ display: 'block', margin: 'auto' }} alt="" />
+					<img src='/images/emptyCart.png' style={{ display: 'block', margin: 'auto' }} alt="" />
 					<h1 style={{ textAlign: 'center', fontSize: '3em' }}>Empty Cart</h1>
 					<div style={{ textAlign: 'center', fontSize: '1.5em', paddingTop: '10vh' }}>
 						<Link to="/">← Ir a Página Principal</Link>

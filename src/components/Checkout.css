@@ -1,0 +1,36 @@
+.checkout {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.checkout img {
+	width: 40%;
+	height: 40%;
+}
+.form-box {
+	margin: 10px 10%;
+}
+.form-box h2 {
+	margin-bottom: 10px;
+}
+.input {
+	margin: 5px 0;
+	border-radius: .25rem;
+	padding: .6em;
+	border: 1px solid #ced4da;
+	font-size: 1em;
+}
+/* -------------------------------------------------------------------------- */
+
+.confirm-box {
+	width: 50%;
+	margin: auto;
+	margin-top: 5%;
+	text-align: center;
+}
+.confirm-box img {
+	max-width: 100%;
+}
+.confirm-box h1 {
+	margin-bottom: 5%;
+}

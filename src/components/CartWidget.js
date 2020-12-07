@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import CartImg from '../images/cart-icon.svg';
 import './CartWidget.css';
 import { CartContext } from '../context/cartContext';
 
@@ -10,7 +9,7 @@ function CartWidget() {
 	
 	return <>
 		<Link to="/cart" className='cartWidget'>
-			<img src={CartImg} alt='cart' style={{filter: 'invert()'}}/>
+			<img src='/images/cart-icon.svg' alt='cart' style={{filter: 'invert()'}}/>
 			<p>{cart.length === 0 ? null : cart.length}</p>
 		</Link>
 	</>

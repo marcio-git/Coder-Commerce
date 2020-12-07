@@ -6,7 +6,7 @@ function Item ({ item }) {
 	return <>
 		<div className='card'>
 			<Link to={`/item/${item.id}`}>
-				<img src={item.url} className='card-img' alt='🕐'/>
+				<img src={`/images/catalog/${item.picture}`} className='card-img' alt='🕐'/>
 			</Link>
 			<div id="border"></div>
 			<p className='price'>{item.price.toLocaleString('en-US', {style: 'currency',currency: 'USD'})}</p>

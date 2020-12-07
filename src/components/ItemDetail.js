@@ -7,7 +7,6 @@ import { CartContext } from '../context/cartContext';
 function ItemDetail({ item }) {
 	const [ mount, setMount ] = useState(true);
 	const [ quantityAdded, setQuantityAdded ] = useState(null);
-
 	const { addItem } = useContext(CartContext);
 
 	const onAdd = quantityToAdd => {
@@ -15,8 +14,10 @@ function ItemDetail({ item }) {
 			{
 				id: item.id,
 				product: item.title,
+				description: item.description,
+				categoryId: item.categoryId,
 				price: item.price,
-				url: item.url
+				picture: item.picture
 			}, quantityToAdd)
 		setQuantityAdded(quantityToAdd)
 		setMount(!mount)
@@ -31,7 +32,7 @@ function ItemDetail({ item }) {
 		</div>
 		<div className='detail-card'>
 			<div className='side-1'>
-				<img src={item.url} alt='🕐' />
+				<img src={`/images/catalog/${item.picture}`} alt='🕐' />
 			</div>
 			<div className='side-2'>
 				<p className='title'>{item.title}</p>
