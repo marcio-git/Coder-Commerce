@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 :root {
-  --primary: #B5A3EC;
-  --secondary: #9685c9;
-  --red: #e43b3b;
+  --primary: #6535e9;
+  --secondary: #2d03a1;
+  --red: #d60000;
 }
 a {
   text-decoration: none;
@@ -20,7 +20,7 @@ li {
 }
 /* ---------------- NavBar ---------------- */
 .navBar {
-  background-color: var(--primary);
+  background: linear-gradient(to right, #de48b5 0%,var(--primary) 100%);
   font-size: min(2.7vw, 1em);
   position: sticky;
   top: 0;
