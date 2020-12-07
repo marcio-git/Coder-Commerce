@@ -8,6 +8,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import CartView from './components/CartView';
 import CartProvider from './context/cartContext';
 import Checkout from './components/Checkout';
+import Page404 from './components/Page404';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <Route exact path="/checkout">
             <Checkout />
+          </Route>
+          <Route>
+            <Page404 />
           </Route>
         </Switch>
       </BrowserRouter>
