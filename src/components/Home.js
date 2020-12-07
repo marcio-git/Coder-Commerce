@@ -30,7 +30,7 @@ function ItemListContainer({slogan}) {
 		<h1 className='slogan'>
 			{slogan}
 		</h1>
-		{loading ? <div className='loader'></div> : <ItemList items={ items }/>}
+		{loading ? <div id="preloader"><div id="loader"/></div> : <ItemList items={ items }/>}
 	</>
 };
 

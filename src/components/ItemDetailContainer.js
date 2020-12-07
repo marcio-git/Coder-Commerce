@@ -23,7 +23,7 @@ useEffect(() => {
 /* -------------------------------------------------------------------------- */
 
 	return <>
-			{loading ? <div className='loader'></div> : <ItemDetail item={ item } />}
+			{loading ? <div id="preloader"><div id="loader"/></div> : <ItemDetail item={ item } />}
 		</>
 }
 

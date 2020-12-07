@@ -65,8 +65,8 @@ function CartView() {
 			<button onClick={clear} className="btn btn-effect vaciar" disabled={cart.length 	=== 0 ? true : false}>Vaciar Carrito</button>
 			<br />
 			{loading ? 
-			<div className='loader'></div> : 
-<>
+			<div id="preloader"><div id="loader"/></div> : 
+			<>
 			<div className="list-cart-box">
 				<ul>
 					<li>Eliminar</li>
