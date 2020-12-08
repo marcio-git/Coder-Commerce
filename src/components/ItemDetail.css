@@ -5,19 +5,19 @@
 	font-size: 1.5em;
 	font-weight: bold
 }
-.category p{
+.category p {
 	display: inline-block;
 	margin: 0 5%;
 	padding: 7px;
 	color: rgb(0, 132, 255);
 	font-weight: 500;
-	border: 1px solid rgba(0,0,0,.1);
+	border: 1px solid #e6e6e6;
 	border-radius: 5px
 }
 .detail-card {
 	display: flex;
 	margin: auto;
-	margin-top: 3vh;
+	margin-top: 2vh;
 	padding: 30px;
 	width: 90%;
 	height: 500px;

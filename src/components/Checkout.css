@@ -19,6 +19,9 @@
 	grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 	grid-column: 0px;
 }
+.form-box-inputs button {
+	font-size: .8em;
+}
 .input {
 	/* width: 100%; */
 	margin: 5px 0;
