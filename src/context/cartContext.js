@@ -5,21 +5,15 @@ export const CartContext = React.createContext();
 function CartProvider({ children, defaultCart }) {
 	const [cart, setCart] = useState(defaultCart)
 	const [totalPrice, setTotalPrice] = useState(0)
-	console.table(cart)
 
 /* ---------------------- agrega un producto al carrito --------------------- */
 const addItem = (item, quantity) => {
 	const { id: itemId } = item;
 	const existeProd = findProd(itemId);//busca el producto
-	console.log(existeProd)
 	//lógica incorporada de no aceptar duplicados
 	if(existeProd) {//si existe lo actualiza
 		existeProd.quantity = quantity;
 		existeProd.totalXprod = (quantity * item.price)
-
-		console.log(existeProd.quantity);
-		console.log(existeProd.totalXprod);
-
 		setCart([...cart])
 	} else {//si no existe lo guarda en el setCart
 		let totalXprod = quantity * parseFloat(item.price);

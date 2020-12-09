@@ -45,7 +45,6 @@ function Checkout() {
 			data: firebase.firestore.FieldValue.serverTimestamp(),
 			total: totalPrice,
 		};
-		console.log({newOrder})
 		const db = getFirestore();
 		const batch = db.batch();
 
@@ -62,7 +61,6 @@ function Checkout() {
 
 		const orders = db.collection("orders");
 		orders.add(newOrder).then(doc => {
-			console.log('Order created with id: ', doc.id);
 			setOrder({id: doc.id, total: totalPrice, items: [...cart]});
 			setLoading(false)
 			setConfirm(true)
