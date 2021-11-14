@@ -48,3 +48,9 @@ npm start
     - Input para email y lógica de repetir el email 2 veces.
 - [x] Finalizada la orden, se recibe mi _order id_ con el id del objeto de firebase.
 - [x] Para la navegabilidad se utiliza el router, y no href’s o location.
+
+
+## Demo Video
+
+https://user-images.githubusercontent.com/55676026/141184496-0f6d218f-e875-47aa-8ccf-af04c054147f.mp4
+
