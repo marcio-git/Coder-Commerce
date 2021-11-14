@@ -103,7 +103,7 @@ function Checkout() {
 				}
 				{confirm && <div className="confirm-box">
 					<h1>¡Su orden ha sido realizado con éxito!</h1>
-					<img src="/images/truck.gif" alt="img"></img>
+					<figure><img src="/images/truck.gif" alt="img"></img></figure>
 					<h2>Nos comunicaremos con ud. en la brevedad</h2>
 					<div className="order-detail">
 						<h3>Resumen de compra</h3>

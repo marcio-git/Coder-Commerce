@@ -37,10 +37,18 @@
 	margin: auto;
 	margin-top: 40px;
 }
-.confirm-box img {
-	max-width: 100%;
-	display: block;
+.confirm-box figure {
+	max-height: 170px;
+	width: 90%;
 	margin: auto;
+	overflow:hidden;
+}
+.confirm-box img {
+	width: 100%;
+	margin: auto;
+	display: block;
+	object-fit: scale-down;
+	object-position: top;
 }
 .confirm-box h1, 
 .confirm-box h2 {
@@ -49,7 +57,7 @@
 }
 /* -------------------------------------------------------------------------- */
 .order-detail {
-	margin: auto; margin-bottom: 5%;
+	margin: auto;
 	max-width: 620px;
 	padding: 2%;
 	border: 1px solid #e6e6e6;
