@@ -9,6 +9,7 @@ import CartView from './components/CartView';
 import CartProvider from './context/cartContext';
 import Checkout from './components/Checkout';
 import Page404 from './components/Page404';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Page404 exact path="/404"/>
           </Route>
         </Switch>
+        <Footer/>
       </BrowserRouter>
     </CartProvider>
   );
