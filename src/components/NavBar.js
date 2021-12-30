@@ -34,9 +34,9 @@ function Menu() {
 					</div>
 				</div>
 			</li>
-			<li><a href='/#'>Promociones</a></li>
-			<li><a href='/#'>Vender</a></li>
-			<li><a href='/#'>Ayuda</a></li>
+			<Link to="/404">Promociones</Link>
+			<Link to="/404">Vender</Link>
+			<Link to="/404">Ayuda</Link>
 		</ul>
 	)
 }

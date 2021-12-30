@@ -32,7 +32,7 @@ function App() {
             <Checkout />
           </Route>
           <Route>
-            <Page404 />
+            <Page404 exact path="/404"/>
           </Route>
         </Switch>
       </BrowserRouter>
